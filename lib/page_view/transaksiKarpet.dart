@@ -20,6 +20,7 @@ class _TransaksiKarpetState extends State<TransaksiKarpet> {
   TextEditingController _plat = new TextEditingController();
   TextEditingController _merk = new TextEditingController();
   TextEditingController _total = new TextEditingController();
+  TextEditingController _jumlah = new TextEditingController();
   TextEditingController _keterangan = new TextEditingController();
   String _tipe = '';
   String _tipeId = '';
@@ -228,6 +229,26 @@ class _TransaksiKarpetState extends State<TransaksiKarpet> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
                       hintText: 'Total harga',
+                      hintStyle: TextStyle(
+                          fontFamily: "Inter", fontWeight: FontWeight.w300)),
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Jumlah Karpet',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontFamily: "Inter",
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 5),
+              Container(
+                child: TextFormField(
+                  controller: _jumlah,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      hintText: 'Jumlah',
                       hintStyle: TextStyle(
                           fontFamily: "Inter", fontWeight: FontWeight.w300)),
                 ),

@@ -32,10 +32,11 @@ class TransaksiServis {
         'Accept': "application/json",
         'Content-Type': "application/json",
         'Access-Control-Allow-Origin': "*",
-        'authorization': "Bearer $token",
+        'Authorization': "Bearer $token",
       },
     );
     print(res.body);
+    print("Bearer $token");
     var data = json.decode(res.body);
 
     return data;
